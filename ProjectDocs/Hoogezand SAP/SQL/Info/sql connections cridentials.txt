@@ -1,0 +1,36 @@
+[SOURCE DB - CPMD]
+1. 10.57.69.133
+2. Db name = CPMD
+3. user = sa
+4. pass = 
+
+[DISTANATION DB - MCSAP]
+1. 10.57.69.133
+2. Db name = MCSAP
+
+3. user1 = mcsap_mc
+4. pass1 = 63636363
+
+5. user2 = mcsap_sap
+6. pass2 = sap32
+
+//=========================For importing information from MCSAP to SAPCPMD========
+[SOURCE DB - MCSAP]
+1. 10.57.69.133
+2. Db name = MCSAP
+3. user = mcsap_mc
+4. pass = 63636363
+
+[DISTANATION DB - SAPCPMD]
+1. 10.57.69.133
+2. Db name = SAPCPMD
+3. user = mcsap_mc
+4. pass = 63636363
+
+//===================================================
+
+[DISTANATION TEST DB - MILLS]
+1. 10.87.0.2
+2. Db name = MILLS
+3. user = opc
+4. pass = kocmoc

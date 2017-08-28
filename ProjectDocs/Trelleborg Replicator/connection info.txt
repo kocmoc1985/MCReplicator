@@ -1,0 +1,8 @@
+This one is working but only from sql server browser, otherwise crashes on "time-out" 2014-12-01'
+
+Server Name :KVINOTH
+            User Name : mixcont
+            Password : mixcont@1234
+            Schema Name:TRELLEBORG
+            Table Name :Interf
+            Client IP: use the below screen shots.

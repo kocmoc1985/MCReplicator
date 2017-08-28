@@ -1,0 +1,4 @@
+[LOOK CAREFULY AT THIS EXAMPLE]
+
+insert into vendor_b values ('228030','Ricoh Nederland BV','Postbus 93150','5203 MB',''s-Hertogenbosch','NL','','0031 73 6451817','','','2014-02-07 08:55:22','','')
+[2014-02-07 08:55:23] com.microsoft.sqlserver.jdbc.SQLServerException: Line 1: Incorrect syntax near 's'. (''s-Hertogenbosch')

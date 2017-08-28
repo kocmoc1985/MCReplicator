@@ -1,0 +1,1 @@
+1. Building of workInstr. table is implemented in DBEraser/DBTools project - > FixedQueryTool.package -> BuildWorkInstrTable.java

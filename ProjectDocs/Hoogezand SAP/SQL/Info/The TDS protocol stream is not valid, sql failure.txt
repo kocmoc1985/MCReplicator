@@ -1,0 +1,5 @@
+[THIS ONE BELOW CAUSED FAILURE]
+statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+
+[THE ONE BELOW WAS THE SOLUTION]
+statement = connection.createStatement();

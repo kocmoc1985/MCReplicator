@@ -1,0 +1,65 @@
+[WORKINSTRUCTION EXAMPLE RECIPE: 00-0-1412] [THIS ONE IS CORRECT]
+
+"speed  20.0, add  30823,30796,10068,11188,11418,17475,10100,30071; 
+
+time  45.0, add  17687,17856,12013; 
+
+temp  105.0, sweep  0.0, temp  120.0, speed  15.0, disch  1.0; 
+
+
+//=============
+
+[WORKINSTRUCTION EXAMPLE RECIPE: 00-0-1416] [THIS ONE IS CORRECT]
+
+"speed  25.0, add  10068,11188,10100,17475,11379,15296,30776; 
+
+time  10.0, add  30743; 
+
+temp  105.0, speed  20.0, add  17899,17856,30617; 
+
+temp  120.0, speed  15.0, disch  1.0; 
+
+
+
+
+
+
+
+
+
+
+
+//==============================================================
+//==============================================================
+//==============================================================
+[WORKINSTRUCTION EXAMPLE RECIPE: 00-0-1154] 
+
+time ,temp ,speed 25.0,sweep ,add 12306,11188,11250,11504,10100,17351;
+time 30.0,temp 100.0,speed 20.0,sweep 2.0,add 12013,17687,17856;
+time 30.0,temp 120.0,speed 15.0,sweep 2.0,add ,ram up,discharge; 
+
+
+//==============================================================
+//==============================================================
+//==============================================================
+[WORKINSTRUCTION EXAMPLE RECIPE: 00-0-1728]
+
+time null,temp null,speed 10.0,sweep null,add 30787,30855,17175,30043,10100,17475,15837,11379,11188,10068,ram null,disch null;
+time 20.0,temp 90.0,speed 16.0,sweep 2.0,add 17687,17742,17899,17857,12013,17872,ram null,disch null;
+time 30.0,temp 115.0,speed null,sweep 2.0,add null,ram 0.0,disch 1.0;  
+
+[CHANGE TO:] [CHANGE IS DONE!]
+time null,temp null,speed 10.0,sweep null,add 30787,30855,17175,30043,10100,17475,15837,11379,11188,10068;
+time 20.0,temp 90.0,speed 16.0,sweep 2.0,add 17687,17742,17899,17857,12013,17872;
+time 30.0,temp 115.0,speed null,sweep 2.0,add null,ram 0.0,disch 1.0;
+
+[specify ram 0=up 2=half 1=down]
+
+[write discharge instead of disch 1.0]
+//==============================================================
+//==============================================================
+
+
+
+
+ 

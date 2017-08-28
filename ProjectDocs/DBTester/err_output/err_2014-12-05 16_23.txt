@@ -1,0 +1,26 @@
+dec 05, 2014 4:23:46 EM FreeQuery.FQ connect
+Allvarlig: null
+java.sql.SQLException: Login timed out.
+	at net.sourceforge.jtds.jdbc.JtdsConnection.<init>(JtdsConnection.java:433)
+	at net.sourceforge.jtds.jdbc.Driver.connect(Driver.java:184)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at forall.Sql.kopplaUpp_tds(Sql.java:59)
+	at forall.Sql.connect(Sql.java:36)
+	at FreeQuery.FQ.connect(FQ.java:120)
+	at FreeQuery.FQ.run(FQ.java:438)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at net.sourceforge.jtds.jdbc.SharedSocket.createSocketForJDBC3(SharedSocket.java:288)
+	at net.sourceforge.jtds.jdbc.SharedSocket.<init>(SharedSocket.java:251)
+	at net.sourceforge.jtds.jdbc.JtdsConnection.<init>(JtdsConnection.java:331)
+	... 8 more
+
