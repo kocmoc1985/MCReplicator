@@ -49,7 +49,7 @@ public class SqlQ {
             dateFrom = "2009-12-12 00:00:00";
         }
         //
-        String rst = "SELECT TOP 100 PERCENT Result.OrderCode AS VHMFNO, Result.BatchNo AS VHMBNO, Limits.Quality AS VHPRNO, \n"
+        String rst = "SELECT Result.OrderCode AS VHMFNO, Result.BatchNo AS VHMBNO, Limits.Quality AS VHPRNO, \n"
                 + " [Plan].Profile AS TPCODE, [Procedure].TestCode AS TCODE, TAG.Name AS TVER, Result.TestNo AS TTRAIL, \n"
                 + " ResultTest.Result AS TAVALUE, Result.TestDate, LimitTest.LSL, LimitTest.USL, LimitTest.LWL AS UCL, \n"
                 + " LimitTest.UWL AS LCL, TAG.Unit AS UNITS, Result.Status AS QCSTATUS, { fn NOW() } AS ExportTime"
@@ -65,8 +65,8 @@ public class SqlQ {
                 //===
                 + " WHERE (Result.Status <> 'DELETED')"
 //                + " AND (Result.TestDate > CONVERT(DATETIME, '2014-12-01 00:00:00', 102))"
-                + " AND (Result.TestDate > CONVERT(DATETIME,'" + dateFrom + "',102))"
-                + " AND (Result.TestDate < CONVERT(DATETIME,'" + dateTo + "',102))" // OBS! ERASE THIS 
+                + " AND (Result.TestDate >= CONVERT(DATETIME,'" + dateFrom + "',102))"
+                + " AND (Result.TestDate <= CONVERT(DATETIME,'" + dateTo + "',102))" // OBS! ERASE THIS 
                 + " ORDER BY Result.OrderCode DESC, Result.BatchNo,"
                 + " [Procedure].TestCode, TAG.Name, Result.TestNo";
         return rst;
