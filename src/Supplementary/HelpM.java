@@ -10,6 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -26,6 +27,30 @@ import main.MainFormCustomer;
  */
 public class HelpM {
 
+    public static boolean runningInNetBeans() {
+        //
+        File currentJar = null;
+        //
+        try {
+            //OBS! OBS! Pay attention here "HelpM.class" -> when Copy dont forget to change!!!!! [2020-10-01]
+            currentJar = new File(HelpM.class.getProtectionDomain().getCodeSource().getLocation().toURI());
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(HelpM.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        //
+        if (currentJar == null) {
+            return false; // As it was running from ".jar" to make output to file
+        }
+        //
+        /* is it a jar file? */
+        if (!currentJar.getName().endsWith(".jar")) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+    
     public static void err_output_to_file() {
         //Write error stream to a file
         create_dir_if_missing("err_output");
