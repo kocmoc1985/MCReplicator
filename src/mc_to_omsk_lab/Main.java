@@ -35,8 +35,8 @@ public class Main implements Runnable {
 
     private Sql_B sql_src = new Sql_B(true, false);
     private Sql_B sql_dest = new Sql_B(true, false);
-    private final static int COPY_INTERVAL_MAIN_MS = 120000; // 2 MIN
-    private final static boolean RUN_LOCALLY = true;
+    private final static int COPY_INTERVAL_MAIN_MS = 240000; // 4 MIN
+    private final static boolean RUN_LOCALLY = false;
 
     public static void main(String[] args) {
         if (HelpM.runningInNetBeans() == false) {
@@ -54,7 +54,7 @@ public class Main implements Runnable {
 
     private void another_instance_running() {
         // added on 2024-11-23
-        new Thread(new OtherInstanceRunning(4447, true, true, false)).start();
+        new Thread(new OtherInstanceRunning(4448, true, true, false)).start();
     }
 
     private void start_replicating_thread() {
