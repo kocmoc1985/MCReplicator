@@ -207,6 +207,15 @@ public class Main implements Runnable {
         }
     }
 
+    /**
+     * #MSSQL-INSERT-RUSSIAN-ISSUE#
+     * @param orderid
+     * @param recipeid
+     * @param batchnr
+     * @param startdate
+     * @param linenr
+     * @return 
+     */
     public static String get_insert_query(String orderid, String recipeid, int batchnr, String startdate, int linenr) {
         String rst = "insert into lab_a"
                 + " ("
